@@ -14,7 +14,6 @@ This project serves as a backend proxy for API requests. Its primary purpose is 
 
 The project follows a modular architecture to ensure maintainability and extensibility. Here's an overview of the main components:
 
- ### Entry Code
 - `lambda_function.py`: The entry point of the Lambda function. It receives the incoming event and context, invokes the `main` function from `main.py`, and returns the response.
 - `main.py`: Contains the core logic of the Lambda function. It parses the incoming event, extracts relevant information, and generates the appropriate response based on the requested path.
 - `models/models.py`: Defines the `Secrets` class, which is implemented as a Singleton. It handles the loading and retrieval of secrets from AWS Secrets Manager.
