@@ -14,15 +14,12 @@ This project serves as a backend proxy for API requests. Its primary purpose is 
 
 The project follows a modular architecture to ensure maintainability and extensibility. Here's an overview of the main components:
 
-### Entry Code
+ ### Entry Code
 - `lambda_function.py`: The entry point of the Lambda function. It receives the incoming event and context, invokes the `main` function from `main.py`, and returns the response.
 - `main.py`: Contains the core logic of the Lambda function. It parses the incoming event, extracts relevant information, and generates the appropriate response based on the requested path.
-### Models
-- `models.py`: Defines the `Secrets` class, which is implemented as a Singleton. It handles the loading and retrieval of secrets from AWS Secrets Manager.
-### Services
-- `api_requester.py`: Provides a utility function to make API requests using the `requests` library.
-### Utils
-- `constants.py`: Defines constant values used throughout the project, such as the Firebase API key name.
+- `models/models.py`: Defines the `Secrets` class, which is implemented as a Singleton. It handles the loading and retrieval of secrets from AWS Secrets Manager.
+- `services/api_requester.py`: Provides a utility function to make API requests using the `requests` library.
+- `utils/constants.py`: Defines constant values used throughout the project, such as the Firebase API key name.
 
 ## Setup and Deployment
 
